@@ -1,0 +1,52 @@
+{
+  "name": "piping-server",
+  "version": "0.9.5-SNAPSHOT",
+  "description": "Streaming Data Transfer Server over HTTP/HTTPS",
+  "bin": {
+    "piping-server": "dist/src/index.js"
+  },
+  "main": "dist/src/piping.js",
+  "types": "dist/src/piping.d.ts",
+  "scripts": {
+    "generate-version": "cross-var echo \"export const VERSION = \\\"$npm_package_version\\\";\" > src/version.ts",
+    "build": "npm run generate-version && tsc",
+    "start": "npm run build && node dist/src/index.js",
+    "lint": "tslint 'src/**/*.ts' && tslint 'test/**/*.ts'",
+    "prepare": "npm run build",
+    "test": "mocha --require ts-node/register --timeout 10000 test/**/*.ts"
+  },
+  "keywords": [
+    "http",
+    "piping",
+    "data-transfer",
+    "server",
+    "transfer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nwtgck/piping-server"
+  },
+  "author": "Ryo Ota <nwtgck@gmail.com> (https://github.com/nwtgck)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^5.0.0",
+    "@types/node": "^10.12.21",
+    "@types/power-assert": "^1.5.0",
+    "@types/request": "^2.48.1",
+    "@types/yargs": "^12.0.0",
+    "cross-var": "^1.1.0",
+    "espower-typescript": "^9.0.0",
+    "get-port": "^5.0.0",
+    "mocha": "^6.0.0",
+    "power-assert": "^1.4.4",
+    "request": "^2.88.0",
+    "then-request": "^6.0.0",
+    "ts-node": "^8.0.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1"
+  },
+  "dependencies": {
+    "multiparty": "^4.2.1",
+    "yargs": "^13.1.0"
+  }
+}
