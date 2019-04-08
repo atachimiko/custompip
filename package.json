@@ -14,7 +14,7 @@
     "lint": "tslint 'src/**/*.ts' && tslint 'test/**/*.ts'",
     "prepare": "npm run build",
     "test": "mocha --require ts-node/register --timeout 10000 test/**/*.ts",
-    "now-build": "npm run build"
+    "now-build": "npm run build && node dist/src/index.js"
   },
   "keywords": [
     "http",
