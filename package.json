@@ -13,7 +13,8 @@
     "start": "npm run build && node dist/src/index.js",
     "lint": "tslint 'src/**/*.ts' && tslint 'test/**/*.ts'",
     "prepare": "npm run build",
-    "test": "mocha --require ts-node/register --timeout 10000 test/**/*.ts"
+    "test": "mocha --require ts-node/register --timeout 10000 test/**/*.ts",
+    "now-build": "npm run build"
   },
   "keywords": [
     "http",
