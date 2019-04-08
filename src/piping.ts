@@ -76,6 +76,7 @@ const indexPage: string =
 <head>
 </head>
 <body>
+1
 </body>
 </html>
 `;
